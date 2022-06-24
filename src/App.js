@@ -17,9 +17,10 @@ function App() {
   const [myState, setMyState] = useState(deal);
 
   function increment() {
-    setMyState( (deal) => {
+    setMyState( () => {
       deal.count++;
-      console.log('increment, change count to ' + deal.count);
+      deal = Freecell.newDeal();
+      console.log('new deal, change count to ' + deal.count);
       return deal;
     });
   }
@@ -34,7 +35,7 @@ function App() {
         <ArrayAcePiles deal={deal} />
       </div>
       <ArrayCardColumns deal={deal} />
-      <button onClick={increment}>Increment</button>
+      <button onClick={increment}>New Deal</button>
     </div>
   );
 }
