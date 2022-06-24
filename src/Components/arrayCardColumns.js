@@ -9,7 +9,7 @@ export default function ArrayCardColumns({deal}) {
         <div className="card-columns-array">
         { columns.map( 
             function(o, i) {
-                return <CardColumn key={i}  cards={columns[i]} />
+                return <CardColumn key={i}  cards={columns[i]} iCol={i}/>
             })
         }
         </div>
