@@ -1,4 +1,5 @@
 import FreeCells from './FreeCells.jsx';
+import Foundations from './Foundations.jsx';
 
 const Content = () => {
     const cardsInFreeCells = [];
@@ -6,6 +7,7 @@ const Content = () => {
     cardsInFreeCells[1] = 'heart_jack';
     cardsInFreeCells[2] = 'diamond_queen';
     cardsInFreeCells[3] = 'club_king';
+    const cardsInFoundations = [];
 
     return (
         <svg 
@@ -14,6 +16,9 @@ const Content = () => {
         >
             <FreeCells
                 cardsInFreeCells={cardsInFreeCells} 
+            />
+            <Foundations
+                cardsInFoundations={cardsInFoundations} 
             />
         </svg>
     )
